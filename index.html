@@ -11,8 +11,11 @@
 <body>
     <div class="main-container">
 
-        <!-- 🌟 Start Screen -->
-        <div class="quiz-card animate " id="start-screen">
+        <div class="timer">
+            <h2 class="hidden" id="timer">Timer: 00:30</h2>
+        </div>
+
+        <div class="quiz-card animate " id="startScreen">
             <h1 class="heading">🚀 Quiz Galaxy</h1>
             <p class="tagline">Test your knowledge. Select your challenge.</p>
 
@@ -35,43 +38,30 @@
                 </div>
             </div>
 
-            <button id="startQuizBtn" class="start-btn">Start Quiz 🚀</button>
+            <button id="startQuizBtn" class="start-btn transform">Start Quiz 🚀</button>
         </div>
 
 
 
-
-
-        <!-- ❓ Quiz Screen -->
-        
-        <div class="quiz-card " id="quizScreen">
+        <div class="quiz-card hidden" id="quizScreen">
             <div class="question-box">
                 <h2 id="questionText">Question?</h2>
             </div>
 
-            <ul class="options" id="answerOptions">
-                <!-- <li class="option-btn">A.</li>
-                <li class="option-btn">B.</li>
-                <li class="option-btn">C.</li>
-                <li class="option-btn">D.</li> -->
-            </ul>
+            <div class="options" id="answerOptions">
+            </div>
 
             <div class="quiz-footer">
-                <span id="question-count">1 / 10</span>
-                <button class="next-btn" id="nextQuestion">Next ➡️</button>
+                <span> <span id="questionCount">1</span> / 10</span>
+                <button class="next-btn transform" disabled id="nextQuestion">Next ➡️</button>
             </div>
         </div>
 
 
-
-
-
-
-        <!-- 🏁 Result Screen -->
-        <div class="quiz-card hidden" id="result-screen">
-            <h2 class="heading">🎉 Quiz Completed!</h2>
-            <p class="score-text">You scored <span id="score">8</span>/10</p>
-            <button class="restart-btn">🔁 Restart Quiz</button>
+        <div class="quiz-card hidden" id="resultScreen">
+            <h2 class="heading"> Quiz Completed!</h2>
+            <p class="score-text">You scored <span id="score"> 0 </span> / 10</p>
+            <button id="restartQuizBtn" class="restart-btn">🔁 Restart Quiz</button>
         </div>
 
     </div>
